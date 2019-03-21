@@ -1,0 +1,13 @@
+.App {
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+}
+
+.RandomEat {
+  width: 70%;
+}
