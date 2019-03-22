@@ -20,7 +20,7 @@ class App extends Component {
       <div className="App">
         {randomEat &&
           <div className="RandomEat">
-            <BackgroundAudio src={randomEat.snd} key={`snd-${randomEat.text}`} />
+            <BackgroundAudio src={randomEat.snd} key={`snd-${randomEat.text}`} loop={true} />
             <RandomCard randomEat={randomEat} onClickGetAnotherRandomEat={this.onClickGetRandomEat} />
           </div>
         }

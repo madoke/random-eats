@@ -6,8 +6,9 @@ export class BackgroundAudio extends Component {
   }
 
   componentDidMount () {
-    const { src } = this.props
+    const { src, loop } = this.props
     this.audio = new Audio(src)
+    this.audio.loop = loop
     this.audio.play()
   }
 
