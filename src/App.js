@@ -27,6 +27,7 @@ class App extends Component {
     let audio = this.state.audio;
     audio && audio.pause();
     audio = new Audio(randomEat.snd);
+    audio.loop = true;
     audio.play();
     this.setState({randomEat, audio})
   }
