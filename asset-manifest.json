@@ -1,0 +1,23 @@
+{
+  "main.css": "/random-eats/static/css/main.e92bb843.chunk.css",
+  "main.js": "/random-eats/static/js/main.e65a7986.chunk.js",
+  "main.js.map": "/random-eats/static/js/main.e65a7986.chunk.js.map",
+  "runtime~main.js": "/random-eats/static/js/runtime~main.a913b46c.js",
+  "runtime~main.js.map": "/random-eats/static/js/runtime~main.a913b46c.js.map",
+  "static/js/2.cb6c132e.chunk.js": "/random-eats/static/js/2.cb6c132e.chunk.js",
+  "static/js/2.cb6c132e.chunk.js.map": "/random-eats/static/js/2.cb6c132e.chunk.js.map",
+  "index.html": "/random-eats/index.html",
+  "precache-manifest.9ac2fefda850702ef5547bff4f53facd.js": "/random-eats/precache-manifest.9ac2fefda850702ef5547bff4f53facd.js",
+  "service-worker.js": "/random-eats/service-worker.js",
+  "static/css/main.e92bb843.chunk.css.map": "/random-eats/static/css/main.e92bb843.chunk.css.map",
+  "static/media/blockhouse.jpg": "/random-eats/static/media/blockhouse.da9e71f5.jpg",
+  "static/media/blockhouse.mp3": "/random-eats/static/media/blockhouse.f2afec55.mp3",
+  "static/media/indian.mp3": "/random-eats/static/media/indian.0d0c4af0.mp3",
+  "static/media/indian.jpg": "/random-eats/static/media/indian.bf545a28.jpg",
+  "static/media/italian.mp3": "/random-eats/static/media/italian.2c08b94e.mp3",
+  "static/media/italian.jpg": "/random-eats/static/media/italian.4f507865.jpg",
+  "static/media/japanese.mp3": "/random-eats/static/media/japanese.0566c765.mp3",
+  "static/media/japanese.png": "/random-eats/static/media/japanese.5a156a51.png",
+  "static/media/mexican.jpg": "/random-eats/static/media/mexican.06d95b88.jpg",
+  "static/media/mexican.mp3": "/random-eats/static/media/mexican.b7d76af4.mp3"
+}
