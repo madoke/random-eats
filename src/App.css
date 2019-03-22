@@ -11,3 +11,9 @@
 .RandomEat {
   width: 70%;
 }
+
+.Fab {
+  position: fixed;
+  bottom: 3vh;
+  right: 3vw;
+}
