@@ -4,8 +4,11 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.9.2",
+    "i18next": "^15.0.7",
+    "i18next-browser-languagedetector": "^3.0.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-i18next": "^10.5.2",
     "react-scripts": "2.1.8"
   },
   "scripts": {
@@ -19,5 +22,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "react-scripts": "^2.1.8"
+  }
 }

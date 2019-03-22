@@ -8,6 +8,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
+import { useTranslation } from 'react-i18next'
+
 const styles = {
   media: {
     height: 0,
@@ -25,6 +27,7 @@ const styles = {
 
 function RandomCard(props) {
   const { classes, randomEat, onClickGetAnotherRandomEat } = props;
+  const { t } = useTranslation();
   return (
     <Card>
         <CardMedia
@@ -34,7 +37,7 @@ function RandomCard(props) {
         />
         <CardContent>
             <Typography className={classes.heading} gutterBottom variant="headline" component="h1">
-            BAZA AO {randomEat.text} CRL
+            {t('baza', { food: t(randomEat.text) }).toUpperCase()}
             </Typography>
         </CardContent>
         <CardActions className={classes.cardActions}>
