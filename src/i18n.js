@@ -6,25 +6,29 @@ import pt from './lang/pt.json'
 import en from './lang/en.json'
 import de from './lang/de.json'
 
-const resources = {
-    en: {
-        translation: en,
-    },
-    pt: {
-        translation: pt,
-    },
-    de: {
-        translation: de,
-    }
+export const languages = {
+  pt: {
+    name: 'Português',
+    translation: pt,
+  },
+  en: {
+    name: 'English',
+    icon: 'gb',
+    translation: en,
+  },
+  de: {
+    name: 'Deutsche',
+    translation: de,
+  },
 }
 
 i18n
   .use(LanguageDetector)
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
-    resources,
+    resources: languages,
     fallbackLng: 'pt',
-    whitelist: ['pt', 'en'],
+    whitelist: Object.keys(languages),
     debug: process.env.NODE_ENV === 'development',
 
     interpolation: {

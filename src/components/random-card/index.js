@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import { withTranslation } from 'react-i18next'
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-
-import { useTranslation } from 'react-i18next'
 
 const styles = {
   media: {
@@ -26,8 +25,7 @@ const styles = {
 };
 
 function RandomCard(props) {
-  const { classes, randomEat, onClickGetAnotherRandomEat } = props;
-  const { t } = useTranslation();
+  const { t, classes, randomEat, onClickGetAnotherRandomEat } = props;
   return (
     <Card>
         <CardMedia
@@ -53,4 +51,8 @@ RandomCard.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(RandomCard);
+export default withTranslation()(
+  withStyles(styles)(
+    RandomCard
+  )
+);
