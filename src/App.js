@@ -7,29 +7,14 @@ import { Eats } from './config/eats'
 import i18n, { languages } from './i18n'
 import RandomCard from './components/random-card'
 import LanguagePicker from './components/language-picker'
+import { BackgroundAudio } from './components/background-audio'
 
 class App extends Component {
+  state = {}
 
-  constructor(props) {
-    super(props);
-    this.state = {}
-    this.onClickGetRandomEat = this.onClickGetRandomEat.bind(this);
-  }
-
-  getRandomElement(arr) {
-    let max = arr.length;
-    let index = Math.floor(Math.random() * Math.floor(max));
-    return arr[index];
-  }
-
-  onClickGetRandomEat() {
-    let randomEat = this.getRandomElement(Eats);
-    let audio = this.state.audio;
-    audio && audio.pause();
-    audio = new Audio(randomEat.snd);
-    audio.loop = true;
-    audio.play();
-    this.setState({randomEat, audio})
+  onClickGetRandomEat = () => {
+    const randomEat = getRandomElement(Eats);
+    this.setState({randomEat})
   }
 
   render() {
@@ -38,6 +23,7 @@ class App extends Component {
       <div className="App">
         {randomEat &&
           <div className="RandomEat">
+            <BackgroundAudio src={randomEat.snd} key={`snd-${randomEat.text}`} loop={true} />
             <RandomCard randomEat={randomEat} onClickGetAnotherRandomEat={this.onClickGetRandomEat} />
           </div>
         }
@@ -57,6 +43,12 @@ class App extends Component {
       </div>
     );
   }
+}
+
+function getRandomElement(arr) {
+  let max = arr.length;
+  let index = Math.floor(Math.random() * Math.floor(max));
+  return arr[index];
 }
 
 export default App;
