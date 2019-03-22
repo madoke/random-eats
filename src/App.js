@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import Button from '@material-ui/core/Button';
+
 import './App.css';
 
-import Button from '@material-ui/core/Button';
-import RandomCard from './components/random-card'
 import { Eats } from './config/eats'
+import i18n, { languages } from './i18n'
+import RandomCard from './components/random-card'
+import LanguagePicker from './components/language-picker'
 
 class App extends Component {
 
@@ -39,11 +42,17 @@ class App extends Component {
         }
         {!randomEat &&
           <div>
-          <Button variant="contained" color="primary" onClick={this.onClickGetRandomEat}>
-            Get random Eat !
-          </Button>
-        </div>
+            <Button variant="contained" color="primary" onClick={this.onClickGetRandomEat}>
+              Get random Eat !
+            </Button>
+          </div>
         }
+
+        <LanguagePicker
+          className="Fab"
+          i18n={i18n}
+          languages={languages}
+        />
       </div>
     );
   }
